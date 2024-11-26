@@ -24,7 +24,7 @@ def get_stock_quote():
         return jsonify({"code": 500, "message": "Missing symbol parameter"})
 
     stock_bid_ask_em_df = ak.stock_bid_ask_em(symbol=symbol)
-    return stock_bid_ask_em_df
+    return jsonify({"code": 200, "data": stock_bid_ask_em_df.to_dict(), "message": "success"})
 
 # 资讯（财联社 cls）
 @app.route('/api/stock/news/cls', methods=['GET'])
