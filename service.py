@@ -1,4 +1,5 @@
 # pip install PyExecJS
+# pip install -r requirePackage.txt
 import pandas as pd
 import json
 import akshare as ak
